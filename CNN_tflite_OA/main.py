@@ -19,6 +19,21 @@ print(left_sonar.getReadings())
 """
 try:
     while True:
+        if front_sonar.getReadings() < 10:
+            new_controll.front()
+        elif right_sonar.getReadings() < 10:
+            new_controll.left()
+        elif left_sonar.getReadings() <10:
+            new_controll.right()
+         else:
+            reverse()
+            
+           
+            
+            
+        
+        
+        """
         readings = [[front_sonar.getReadings(), right_sonar.getReadings(), left_sonar.getReadings()]]
         move = new_model.get_prediction(readings)
         print(readings)
@@ -31,6 +46,7 @@ try:
             new_controll.rigth()
         else:
             reverse()
+        """"
 except KeyboardInterrupt:
     GPIO.cleanup()
     new_controll.clean_control()
