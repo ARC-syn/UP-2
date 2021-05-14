@@ -17,7 +17,7 @@ class comm:
         self.targetlist.append(cords)
         
     def gettarget(self):
-        return self.targetlst[0]
+        return self.targetlist[0]
     
     def sendCords(self, message):
         self.s.send(message.encode('ascii'))
